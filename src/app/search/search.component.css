@@ -1,0 +1,32 @@
+.search-container {
+  display: inline-block;
+}
+
+.search-input {
+  padding: 5px 16px;
+  width: 250px;
+  color: #333;
+  border-radius: 100px;
+  border: none;
+  height: 30px;
+}
+
+.result-container {
+  padding: 8px 16px 0;
+  background-color: #fafafa;
+  text-align: start;
+}
+
+.result-title {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding-bottom: 8px;
+}
+
+
+
+
+
+
+

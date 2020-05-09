@@ -1,0 +1,32 @@
+<div class="test" *ngIf="movie">
+
+    <img id="img-list" src="https://image.tmdb.org/t/p/w780{{movie.backdrop_path}}" alt="Poster of movie" />
+    <h2>{{movie.title}}</h2>
+    <h4 class="overview">Overview</h4>
+    <p class="con">{{movie.overview}}</p>
+    <p>Vote: {{movie.vote_average}}</p>
+    <p>Runtime: {{movie.runtime}}min</p>
+    <p>Release date: {{movie.release_date}}</p>
+    <p>Budget: ${{movie.budget}}</p>
+
+
+    <h3 class="con">Cast:</h3>
+    <ul>
+        <li *ngFor="let castMember of movie.cast">
+            <img class="castPersons" *ngIf="castMember.profile_path"
+                src="http://image.tmdb.org/t/p/w185{{castMember.profile_path}}" height="150" alt="Profile of actor">
+
+            Name: <a routerLink="/person-detail/{{castMember.id}}">{{castMember.name}}</a> Character:
+            {{castMember.character}}
+        </li>
+    </ul>
+
+    <h3>Crew:</h3>
+    <ul>
+        <li *ngFor="let crewMember of movie.crew">Name: {{crewMember.name}} Job: {{crewMember.job}}</li>
+    </ul>
+</div>
+
+<div *ngIf="!movie">
+    <h1>Please wait... :D</h1>
+</div>

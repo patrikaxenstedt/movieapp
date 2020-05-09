@@ -1,0 +1,14 @@
+<app-search></app-search>
+<app-search-result></app-search-result>
+
+<div class="test">
+    <h1>Popular Movies</h1>
+</div>
+
+<div class="inside" *ngFor="let movie of movies">
+
+    <img src="https://image.tmdb.org/t/p/w185{{movie.poster_path}}" alt="Poster of movie" />
+
+    <h6><a class="con" routerLink="/movie-detail/{{movie.id}}">{{movie.title}}</a></h6>
+    <p>Vote: {{movie.vote_average}}</p>
+</div>
