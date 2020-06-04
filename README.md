@@ -1,5 +1,4 @@
-# U07AngularMovieApp
-
+# U07AngularMovieApp 🍿
 ## Do the following to start the application
 ```
 * git clone
